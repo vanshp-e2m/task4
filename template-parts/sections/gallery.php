@@ -5,13 +5,13 @@
  * @package Vansh_Projects
  */
 
-$gallery = get_field( 'gallery' );
-if ( $gallery ) :
+$gallery_items = get_sub_field( 'gallery_items' );
+if ( $gallery_items ) :
 	?>
 	<section class="gallery-section">
 		<div class="container">
 			<div class="gallery-grid">
-				<?php foreach ( $gallery as $item ) : ?>
+				<?php foreach ( $gallery_items as $item ) : ?>
 					<div class="gallery-item">
 						<?php if ( ! empty( $item['gallery_image'] ) ) : ?>
 							<img src="<?php echo esc_url( $item['gallery_image'] ); ?>" alt="<?php echo esc_attr( $item['gallery_caption'] ?? '' ); ?>">

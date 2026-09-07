@@ -6,49 +6,50 @@
  */
 
 /**
- * Create a project post and populate its ACF fields programmatically
+ * Create a page and populate its ACF Flexible Content fields programmatically
  */
 function vansh_projects_create_programmatic_project() {
-	// Create the project post
+	// Create a page post (since flexible content is assigned to pages)
 	$post_data = array(
-		'post_title'    => 'AI Generated Project',
-		'post_content'  => 'This project was created programmatically.',
+		'post_title'    => 'AI Generated Page',
+		'post_content'  => 'This page was created programmatically with flexible content.',
 		'post_status'   => 'publish',
-		'post_type'     => 'project',
+		'post_type'     => 'page',
 	);
 
 	$post_id = wp_insert_post( $post_data );
 
 	if ( ! is_wp_error( $post_id ) ) {
-		// Populate ACF fields with 3 layouts
-		$acf_data = array(
-			// Layout 1: Hero Section
-			'hero_section' => array(
-				'hero_title'       => 'Welcome to Our Project',
-				'hero_subtitle'    => 'An amazing project built with modern technology',
-				'hero_background'  => 0, // Set to image ID if available
+		// Populate ACF Flexible Content field with 3 layouts
+		$flexible_content = array(
+			// Layout 1: Hero
+			array(
+				'acf_fc_layout' => 'hero',
+				'hero_title'    => 'Welcome to Our Page',
+				'hero_subtitle' => 'An amazing page built with modern technology',
+				'hero_background' => 0, // Set to image ID if available
 			),
 			// Layout 2: Text Block
-			'text_block' => array(
-				'text_heading' => 'About This Project',
-				'text_content' => 'This is a comprehensive project that showcases our capabilities in web development and design.',
+			array(
+				'acf_fc_layout' => 'text_block',
+				'text_heading' => 'About This Page',
+				'text_content' => 'This is a comprehensive page that showcases our capabilities in web development and design.',
 			),
-			// Layout 3: CTA Section
-			'cta_section' => array(
-				'cta_title'         => 'Get Started Today',
-				'cta_description'   => 'Ready to begin your journey? Contact us now.',
-				'cta_button_text'   => 'Contact Us',
-				'cta_button_link'   => 'https://example.com/contact',
+			// Layout 3: CTA
+			array(
+				'acf_fc_layout' => 'cta',
+				'cta_title'       => 'Get Started Today',
+				'cta_description' => 'Ready to begin your journey? Contact us now.',
+				'cta_button_text' => 'Contact Us',
+				'cta_button_link' => 'https://example.com/contact',
 			),
 		);
 
-		// Update each ACF field
-		foreach ( $acf_data as $field_key => $field_value ) {
-			update_field( $field_key, $field_value, $post_id );
-		}
+		// Update the flexible content field
+		update_field( 'page_sections', $flexible_content, $post_id );
 
-		// Assign taxonomy term
-		wp_set_object_terms( $post_id, 'web-design', 'project_type', true );
+		// Apply the page template
+		update_post_meta( $post_id, '_wp_page_template', 'page-templates/page-sections.php' );
 
 		return $post_id;
 	}
@@ -63,15 +64,15 @@ function vansh_projects_create_programmatic_project() {
 // $created_project_id = vansh_projects_create_programmatic_project();
 
 /**
- * Admin action to create test project
- * Visit: /wp-admin/?create_test_project=1
+ * Admin action to create test page
+ * Visit: /wp-admin/?create_test_page=1
  */
-add_action( 'admin_init', 'vansh_projects_create_test_project' );
-function vansh_projects_create_test_project() {
-	if ( isset( $_GET['create_test_project'] ) && current_user_can( 'manage_options' ) ) {
-		$project_id = vansh_projects_create_programmatic_project();
-		if ( $project_id ) {
-			wp_redirect( admin_url( 'post.php?post=' . $project_id . '&action=edit' ) );
+add_action( 'admin_init', 'vansh_projects_create_test_page' );
+function vansh_projects_create_test_page() {
+	if ( isset( $_GET['create_test_page'] ) && current_user_can( 'manage_options' ) ) {
+		$page_id = vansh_projects_create_programmatic_project();
+		if ( $page_id ) {
+			wp_redirect( admin_url( 'post.php?post=' . $page_id . '&action=edit' ) );
 			exit;
 		}
 	}

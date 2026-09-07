@@ -12,13 +12,45 @@ get_header(); ?>
 	while ( have_posts() ) :
 		the_post();
 
-		// Render each section using template parts
-		get_template_part( 'template-parts/sections/hero' );
-		get_template_part( 'template-parts/sections/text-block' );
-		get_template_part( 'template-parts/sections/gallery' );
-		get_template_part( 'template-parts/sections/cta' );
-		get_template_part( 'template-parts/sections/stats' );
-		get_template_part( 'template-parts/sections/two-column' );
+		// Check if the flexible content field has rows of data
+		if ( have_rows( 'page_sections' ) ) :
+
+			// Loop through the rows
+			while ( have_rows( 'page_sections' ) ) : the_row();
+
+				// Get the layout name
+				$layout = get_row_layout();
+
+				// Load the appropriate template part based on layout
+				switch ( $layout ) {
+					case 'hero':
+						get_template_part( 'template-parts/sections/hero' );
+						break;
+					case 'text_block':
+						get_template_part( 'template-parts/sections/text-block' );
+						break;
+					case 'gallery':
+						get_template_part( 'template-parts/sections/gallery' );
+						break;
+					case 'cta':
+						get_template_part( 'template-parts/sections/cta' );
+						break;
+					case 'stats':
+						get_template_part( 'template-parts/sections/stats' );
+						break;
+					case 'two_column':
+						get_template_part( 'template-parts/sections/two-column' );
+						break;
+				}
+
+			endwhile;
+
+		else :
+
+			// No layouts found
+			echo '<p>No page sections found.</p>';
+
+		endif;
 
 	endwhile; // End of the loop.
 	?>

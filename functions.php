@@ -181,12 +181,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/cpt-project.php';
 
-/**
- * Register ACF Fields.
- */
-if ( function_exists( 'acf_add_local_field_group' ) ) {
-	require get_template_directory() . '/inc/acf-fields.php';
-}
+
 
 /**
  * Query Examples.

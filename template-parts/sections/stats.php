@@ -5,13 +5,13 @@
  * @package Vansh_Projects
  */
 
-$stats = get_field( 'stats' );
-if ( $stats ) :
+$stats_items = get_sub_field( 'stats_items' );
+if ( $stats_items ) :
 	?>
 	<section class="stats-section">
 		<div class="container">
 			<div class="stats-grid">
-				<?php foreach ( $stats as $stat ) : ?>
+				<?php foreach ( $stats_items as $stat ) : ?>
 					<div class="stat-item">
 						<?php if ( ! empty( $stat['stat_value'] ) ) : ?>
 							<div class="stat-value"><?php echo esc_html( $stat['stat_value'] ); ?></div>

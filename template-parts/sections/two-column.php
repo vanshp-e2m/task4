@@ -5,20 +5,22 @@
  * @package Vansh_Projects
  */
 
-$two_column = get_field( 'two_column' );
-if ( $two_column ) :
+$column_left = get_sub_field( 'column_left' );
+$column_right = get_sub_field( 'column_right' );
+
+if ( $column_left || $column_right ) :
 	?>
 	<section class="two-column-section">
 		<div class="container">
 			<div class="two-column-grid">
-				<?php if ( ! empty( $two_column['column_left'] ) ) : ?>
+				<?php if ( $column_left ) : ?>
 					<div class="column-left">
-						<?php echo wp_kses_post( $two_column['column_left'] ); ?>
+						<?php echo wp_kses_post( $column_left ); ?>
 					</div>
 				<?php endif; ?>
-				<?php if ( ! empty( $two_column['column_right'] ) ) : ?>
+				<?php if ( $column_right ) : ?>
 					<div class="column-right">
-						<?php echo wp_kses_post( $two_column['column_right'] ); ?>
+						<?php echo wp_kses_post( $column_right ); ?>
 					</div>
 				<?php endif; ?>
 			</div>
