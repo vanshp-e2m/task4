@@ -1,0 +1,7 @@
+node_modules/
+vendor/
+*.log
+
+# Compiled CSS is generated from sass/ - but _s ships it and WordPress needs
+# style.css to exist for the theme header, so we keep it tracked.
+!style.css
