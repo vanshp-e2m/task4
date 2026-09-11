@@ -21,11 +21,11 @@ Build a WordPress theme with Advanced Custom Fields Flexible Content, Custom Pos
 
 ## Videos
 
-**Video 1** (2.5 min): https://www.loom.com/share/3f858c4bb45243678ca76b4858e59e3d
-- ACF editor, all 6 layouts, repeater, Local JSON
+**Video 1** (5 min): https://www.loom.com/share/0768dde5cd5a4990b034b6dbf03e565e
+- Custom SAS Theme, Projects, Rendering Workflow
 
-**Video 2** (2.5 min): https://www.loom.com/share/fa29d16c3a014a9f92a0c09b5bc641bc
-- Front end rendering, programmatic creation, Query Monitor
+**Video 2** (2 min 8 sec): https://www.loom.com/share/fa29d16c3a014a9f92a0c09b5bc641bc
+- Understanding ACF Key Values and Repeaters
 
 ## Key Files
 
