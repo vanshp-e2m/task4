@@ -54,7 +54,7 @@ function vansh_projects_create_project( $overrides = array() ) {
 	$sections = array(
 
 		// --- Layout 1: hero ---
-		array(
+		array(	
 			'acf_fc_layout'   => 'hero',
 			'hero_title'      => 'Built Entirely From Code',
 			'hero_subtitle'   => 'This project post and every section below were created by a PHP function, not by a human clicking in wp-admin.',
