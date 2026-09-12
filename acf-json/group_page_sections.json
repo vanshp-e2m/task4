@@ -27,7 +27,7 @@
                             "label": "Title",
                             "name": "hero_title",
                             "type": "text",
-                            "instructions": "",
+
                             "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {

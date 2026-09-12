@@ -27,7 +27,7 @@ verify that from a finished page alone.
 | 5 | `http://wordpress-learning.local/project/programmatically-created-project/` |
 | 6 | `http://wordpress-learning.local/query-test/` |
 
-**Checklist:**
+y Okay, now let's see the query monitor Part here, here we can go to the database queries and we can actually see, the database queries and we can Actually see, the project and the pages which, we had, inserted into the project. Here Project and the pages which, We had, inserted into the project. Here we can see that the project type and It's a web design, and, this slug is the web design, like, like, what we have inserted, so it's working properly, and here The web design, like, like, what We have inserted, so it's working properly, and here it's published, like, and then, now it's, page And there are now it's a page sections, which we have also inserted into the, so in the database query, it's showing like, so it means the projects works So in the database query, it's showing like, so it means the projects works completely fine. And, last thing I want to show is the...
 
 - [ ] Day 2 plugins deactivated (`vansh-day2`, `vansh-day2-addon`) — they inject
       a yellow box into every post and text into the footer

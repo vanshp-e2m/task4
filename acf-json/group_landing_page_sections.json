@@ -1,0 +1,314 @@
+{
+  "key": "group_landing_page",
+  "title": "Landing Page Sections",
+  "fields": [
+    {
+      "key": "field_landing_sections",
+      "label": "Page Sections",
+      "name": "landing_sections",
+      "type": "flexible_content",
+      "instructions": "Build the landing page with flexible sections",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layouts": [
+        {
+          "key": "layout_hero",
+          "label": "Hero",
+          "name": "hero",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_hero_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_hero_subheading",
+              "label": "Subheading",
+              "name": "subheading",
+              "type": "textarea"
+            },
+            {
+              "key": "field_hero_cta_primary_text",
+              "label": "Primary CTA Text",
+              "name": "cta_primary_text",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_cta_primary_link",
+              "label": "Primary CTA Link",
+              "name": "cta_primary_link",
+              "type": "url"
+            },
+            {
+              "key": "field_hero_cta_secondary_text",
+              "label": "Secondary CTA Text",
+              "name": "cta_secondary_text",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_cta_secondary_link",
+              "label": "Secondary CTA Link",
+              "name": "cta_secondary_link",
+              "type": "url"
+            },
+            {
+              "key": "field_hero_background_image",
+              "label": "Background Image",
+              "name": "background_image",
+              "type": "image",
+              "return_format": "id"
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        {
+          "key": "layout_features",
+          "label": "Features",
+          "name": "features",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_features_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_features_description",
+              "label": "Description",
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "key": "field_features_items",
+              "label": "Features",
+              "name": "items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_feature_icon",
+                  "label": "Icon",
+                  "name": "icon",
+                  "type": "image",
+                  "return_format": "id"
+                },
+                {
+                  "key": "field_feature_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_feature_text",
+                  "label": "Text",
+                  "name": "text",
+                  "type": "textarea"
+                }
+              ]
+            },
+            {
+              "key": "field_features_cta_text",
+              "label": "CTA Text",
+              "name": "cta_text",
+              "type": "text"
+            },
+            {
+              "key": "field_features_cta_link",
+              "label": "CTA Link",
+              "name": "cta_link",
+              "type": "url"
+            }
+          ]
+        },
+        {
+          "key": "layout_pricing",
+          "label": "Pricing",
+          "name": "pricing",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_pricing_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_pricing_plans",
+              "label": "Pricing Plans",
+              "name": "plans",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_plan_name",
+                  "label": "Plan Name",
+                  "name": "name",
+                  "type": "text"
+                },
+                {
+                  "key": "field_plan_price",
+                  "label": "Price",
+                  "name": "price",
+                  "type": "number"
+                },
+                {
+                  "key": "field_plan_billing",
+                  "label": "Billing Period",
+                  "name": "billing",
+                  "type": "text"
+                },
+                {
+                  "key": "field_plan_features",
+                  "label": "Features",
+                  "name": "features",
+                  "type": "textarea"
+                },
+                {
+                  "key": "field_plan_cta_text",
+                  "label": "CTA Text",
+                  "name": "cta_text",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "layout_testimonials",
+          "label": "Testimonials",
+          "name": "testimonials",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_testimonials_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_testimonial_items",
+              "label": "Testimonials",
+              "name": "items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_testimonial_quote",
+                  "label": "Quote",
+                  "name": "quote",
+                  "type": "textarea"
+                },
+                {
+                  "key": "field_testimonial_author",
+                  "label": "Author Name",
+                  "name": "author",
+                  "type": "text"
+                },
+                {
+                  "key": "field_testimonial_role",
+                  "label": "Author Role",
+                  "name": "role",
+                  "type": "text"
+                },
+                {
+                  "key": "field_testimonial_avatar",
+                  "label": "Avatar",
+                  "name": "avatar",
+                  "type": "image",
+                  "return_format": "id"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "layout_blog",
+          "label": "Blog Resources",
+          "name": "blog",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_blog_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_blog_count",
+              "label": "Number of Posts",
+              "name": "count",
+              "type": "number",
+              "default_value": 3
+            }
+          ]
+        },
+        {
+          "key": "layout_cta",
+          "label": "Call to Action",
+          "name": "cta",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_cta_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_cta_description",
+              "label": "Description",
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "key": "field_cta_button_text",
+              "label": "Button Text",
+              "name": "button_text",
+              "type": "text"
+            },
+            {
+              "key": "field_cta_button_link",
+              "label": "Button Link",
+              "name": "button_link",
+              "type": "url"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      },
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/landing-page.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Flexible Content field for landing pages - 5 main layouts"
+}

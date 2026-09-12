@@ -27,7 +27,7 @@ The _ row tells ACF which field definition the value belongs to so ACF knows how
 3. Repeaters work in a way
 
 page_sections_2_stats_items → 3
-
+as the one that was the most popular.
 The 3 means the repeater has 3 rows.
 
 
