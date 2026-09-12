@@ -285,6 +285,225 @@
               "type": "url"
             }
           ]
+        },
+        {
+          "key": "layout_footer_cta",
+          "label": "Footer CTA",
+          "name": "footer-cta",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_footer_cta_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_footer_cta_description",
+              "label": "Description",
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "key": "field_footer_cta_button_text",
+              "label": "Button Text",
+              "name": "button_text",
+              "type": "text"
+            },
+            {
+              "key": "field_footer_cta_button_link",
+              "label": "Button Link",
+              "name": "button_link",
+              "type": "url"
+            },
+            {
+              "key": "field_footer_cta_background_image",
+              "label": "Background Image",
+              "name": "background_image",
+              "type": "image",
+              "return_format": "id"
+            }
+          ]
+        },
+        {
+          "key": "layout_reports",
+          "label": "Reports",
+          "name": "reports",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_reports_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_reports_items",
+              "label": "Report Items",
+              "name": "items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_report_icon",
+                  "label": "Icon",
+                  "name": "icon",
+                  "type": "image",
+                  "return_format": "id"
+                },
+                {
+                  "key": "field_report_value",
+                  "label": "Value",
+                  "name": "value",
+                  "type": "text"
+                },
+                {
+                  "key": "field_report_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_report_description",
+                  "label": "Description",
+                  "name": "description",
+                  "type": "textarea"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "layout_global_presence",
+          "label": "Global Presence",
+          "name": "global-presence",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_global_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_global_description",
+              "label": "Description",
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "key": "field_global_items",
+              "label": "Stats",
+              "name": "items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_global_number",
+                  "label": "Number",
+                  "name": "number",
+                  "type": "text"
+                },
+                {
+                  "key": "field_global_label",
+                  "label": "Label",
+                  "name": "label",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "key": "field_global_map_image",
+              "label": "Map Image",
+              "name": "map_image",
+              "type": "image",
+              "return_format": "id"
+            }
+          ]
+        },
+        {
+          "key": "layout_steps",
+          "label": "Steps",
+          "name": "steps",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_steps_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_steps_description",
+              "label": "Description",
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "key": "field_steps_items",
+              "label": "Steps",
+              "name": "items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_step_title",
+                  "label": "Title",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_step_description",
+                  "label": "Description",
+                  "name": "description",
+                  "type": "textarea"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "layout_social_proof",
+          "label": "Social Proof",
+          "name": "social-proof",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_social_proof_heading",
+              "label": "Heading",
+              "name": "heading",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_social_proof_description",
+              "label": "Description",
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "key": "field_social_proof_logos",
+              "label": "Logos",
+              "name": "logos",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_social_proof_logo",
+                  "label": "Logo",
+                  "name": "logo",
+                  "type": "image",
+                  "return_format": "id"
+                },
+                {
+                  "key": "field_social_proof_company_name",
+                  "label": "Company Name",
+                  "name": "company_name",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
